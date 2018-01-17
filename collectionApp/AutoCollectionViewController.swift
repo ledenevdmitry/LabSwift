@@ -16,29 +16,20 @@ class AutoCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        let cell = UICollectionViewCell() as! AutoCollectionViewCell
-//
-//        cell.configure(for: <#T##UIImage#>, name: <#T##String#>)
-//
-//        return cell
-        return 10 // realm
+
+        return 2 // realm
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellReuseId", for: indexPath) as! AutoCollectionViewCell
+        
+        cell.configure(for: UIImage(named: "\(indexPath.row)")!, name: "person \(indexPath.row)") // Realm
+        
+        return cell
     }
     
     
     
 }
 
-class AutoCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var image: UIImageView!
-    
-    @IBOutlet weak var label: UILabel!
-    
-    func configure(for img: UIImage, name: String) { // imgName: String
-        image.image = img
-        label.text = name
-    }
-}
+

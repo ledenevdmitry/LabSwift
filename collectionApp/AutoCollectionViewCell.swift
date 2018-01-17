@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import UIKit
+
+class AutoCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var image: UIImageView!
+    
+    @IBOutlet weak var label: UILabel!
+    
+    func configure(for img: UIImage, name: String) { // imgName: String
+        image.image = img
+        label.text = name
+    }
+}
+
