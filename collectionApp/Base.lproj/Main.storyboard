@@ -76,6 +76,52 @@
             </objects>
             <point key="canvasLocation" x="2072.8000000000002" y="241.52923538230885"/>
         </scene>
+        <!--View Image-->
+        <scene sceneID="AWO-UT-W2M">
+            <objects>
+                <viewController storyboardIdentifier="infoVc" id="Qul-BO-bgf" customClass="ViewImage" customModule="collectionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lbK-Mk-eJD"/>
+                        <viewControllerLayoutGuide type="bottom" id="9kQ-Bo-RSd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Xo-Qu-wxr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xjG-zn-IhN">
+                                <rect key="frame" x="16" y="20" width="343" height="556"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xpC-Ql-jo3">
+                                <rect key="frame" x="166.5" y="626" width="42" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umw-G6-ty2">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xjG-zn-IhN" secondAttribute="trailing" id="03H-UZ-DYM"/>
+                            <constraint firstItem="xjG-zn-IhN" firstAttribute="leading" secondItem="2Xo-Qu-wxr" secondAttribute="leadingMargin" id="Eq0-VB-2P3"/>
+                            <constraint firstItem="xpC-Ql-jo3" firstAttribute="centerX" secondItem="2Xo-Qu-wxr" secondAttribute="centerX" id="KQx-n5-jpm"/>
+                            <constraint firstItem="xjG-zn-IhN" firstAttribute="centerX" secondItem="2Xo-Qu-wxr" secondAttribute="centerX" id="VlW-n1-ZLv"/>
+                            <constraint firstItem="xjG-zn-IhN" firstAttribute="top" secondItem="lbK-Mk-eJD" secondAttribute="bottom" id="cwB-T1-brs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="77h-xO-nmE"/>
+                    <connections>
+                        <outlet property="img" destination="xjG-zn-IhN" id="Nq7-t8-nPM"/>
+                        <outlet property="lbl" destination="Umw-G6-ty2" id="ohX-bw-fgS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Csg-zJ-SNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2877.5999999999999" y="241.52923538230885"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="F5z-Q7-DaT">
             <objects>

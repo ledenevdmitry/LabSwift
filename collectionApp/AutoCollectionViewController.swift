@@ -28,8 +28,12 @@ class AutoCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    
-    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var vc = self.storyboard?.instantiateViewController(withIdentifier: "infoVc") as! ViewImage
+        vc.configure(for: UIImage(named: "\(indexPath.row)")!, name: "person \(indexPath.row)")
+        
+        present(vc, animated: true, completion: {})
+     }
 }
 
 
